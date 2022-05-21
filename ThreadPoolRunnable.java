@@ -1,7 +1,5 @@
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
-import java.util.ArrayList;
-import java.util.List;
 import java.util.Queue;
 import java.util.concurrent.BlockingQueue;
 
@@ -11,7 +9,6 @@ public class ThreadPoolRunnable implements Runnable {
     private BlockingQueue taskQueue;
     private boolean isStopped = false;
     private Queue<String> times;
-    private List<Object> res = new ArrayList<>();
 
     public ThreadPoolRunnable(BlockingQueue queue, Queue<String> t) {
         taskQueue = queue;
