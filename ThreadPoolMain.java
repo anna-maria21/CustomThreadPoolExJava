@@ -9,7 +9,7 @@ public class ThreadPoolMain {
         System.out.println("Start time: " + LocalDateTime.now().format(DateTimeFormatter.ofPattern("HH:mm:ss")) + "\n");
         CustomThreadPool threadPool = new CustomThreadPool(2, 10);
 
-        threadPool.map("longRunningTask", List.of(1, 2, 3, 4));
+        List<Object> res = threadPool.map("longRunningTask", List.of(1, 2, 3, 4));
 
         threadPool.shutdown();
 
